@@ -4,8 +4,6 @@ import CalendarHeader from './components/CalendarHeader';
 import CalendarGrid from './components/CalendarGrid';
 import ProducePanel from './components/ProducePanel';
 import MarketReminder from './components/MarketReminder';
-import WeatherWidget from './components/WeatherWidget';
-import PriceTracker from './components/PriceTracker';
 import MarketingTips from './components/MarketingTips';
 import SeasonalRecipes from './components/SeasonalRecipes';
 
@@ -65,21 +63,12 @@ function App() {
           </div>
 
           {/* Right Sidebar */}
-          <div className="xl:col-span-1">
+          <div className="xl:col-span-2 space-y-6">
             <ProducePanel currentDate={currentDate} />
-          </div>
-
-          {/* Additional Widgets */}
-          <div className="xl:col-span-1">
-            <WeatherWidget currentDate={currentDate} />
-            <PriceTracker currentDate={currentDate} />
+            <MarketingTips currentDate={currentDate} />
           </div>
         </div>
 
-        {/* Marketing Strategy Section */}
-        <div className="mt-8">
-          <MarketingTips currentDate={currentDate} />
-        </div>
 
         {/* Seasonal Recipes Section */}
         <div className="mt-8">
